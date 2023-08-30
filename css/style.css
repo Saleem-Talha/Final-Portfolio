@@ -710,7 +710,7 @@ canvas {
 
     .swiper-slide {
         flex: 1 0 calc(100% ); /* One card per row on smaller screens */
-        margin: 15px 0;
+        margin: 15px 5px;
     }
 }
 
