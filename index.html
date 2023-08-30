@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Saleem Talha Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+    <!-- CSs -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rammetto+One&family=Varela+Round&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // Initialize EmailJS with your User ID
+            emailjs.init("atbjzS86Oz4CLJb9-");
+        })();
+
+        // Function to send the email
+        // Function to send the email
+        function sendEmail() {
+            // Access form field values using the ids
+            var usernameValue = document.getElementById("username").value;
+            var emailValue = document.getElementById("email").value;
+            var messageValue = document.getElementById("message").value;
+
+            // Clear the form field values
+            document.getElementById("username").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("message").value = "";
+
+            // Create an emailjs template and send the email using the values
+            emailjs.send("service_en14tt4", "template_ssym22n", {
+                username: usernameValue,
+                email: emailValue,
+                message: messageValue
+            })
+                .then(function (response) {
+                    console.log("Email sent successfully:", response);
+                    alert('Thanks for visiting my site! Your message has been sent.');
+                }, function (error) {
+                    console.log("Email send failed:", error);
+                    alert('Sorry, there was an error sending your message. Please try again later.');
+                });
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+
+</head>
+
+<body class="text-white">
+    <div id="particles-container">
+        <div id="particles-js"></div>
+    </div>
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark main-nav">
+        <div class="container">
+            <a class="navbar-brand bold-text" href="#" data-aos="fade-down" data-aos-delay="100">Saleem Talha</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end nav-headings" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="400">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="600">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item" data-aos="fade-down" data-aos-delay="700">
+                        <a class="nav-link" href="#contacts">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // on some scroll a new class will be added to nav
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+                navbar.classList.add('fixed-top');
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.classList.remove('fixed-top');
+            }
+        });
+    </script>
+
+
+
+
+
+    <section id="home">
+        <div class="container" data-aos="fade-up" data-aos-delay="1000">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="">
+                        <p class="mb-3 main-text fs-1 white-opacity-50">Hi, my name is</p>
+                        <h1 class="bold-text mb-3  fs-5">Saleem Talha</h1>
+                        <h3 class="mb-3 fs-2">
+                            I am a <span class="text-main" id="typing-effect"></span>
+                        </h3>
+                        <div class="card mb-3">
+                            <div class="card-body ps-0 py-5">
+                                <p class="text-start main-text bold-text fs-1 white-opacity-50 mb-0">
+                                    I am Saleem Talha, a 20-year-old student currently pursuing
+                                    my BSCS degree at Air University, Islamabad. My passion for
+                                    technology has led me to explore various facets of
+                                    development and design, and I have honed my skills in <span
+                                        style="color: #60c965; font-weight: 600;">Web Development,
+                                        App
+                                        Development,</span> and <span style="color: #60c965; font-weight: 600;">Graphic
+                                        Design.</span>
+                                </p>
+                                <button class="btn btn-main mt-3 main-text me-3">
+                                    Download CV
+                                </button>
+                                <a href="#contacts" class="btn btn-outline-main mt-3 main-text">Contact Me</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="hide-on-mobile">
+                        <ul class="social-links">
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/saleem-talha-47b004281/" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/Saleem-Talha" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTMXgJFbZkGdZlLdQgCcVtjPmPnPhwVghMHjhqqRTrDLCbtXNcKgDSrkblhRvwZrhRRDqB"
+                                    target="_blank">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://wa.link/g4kggi" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            const phrases = [
+                "Web Developer",
+                "Flutter Developer",
+                "Ui/UX Desinger",
+            ];
+            const typingElement = document.getElementById("typing-effect");
+
+            function typeText(text, element, delay) {
+                let index = 0;
+                const interval = setInterval(() => {
+                    element.textContent = text.slice(0, index);
+                    index++;
+
+                    if (index > text.length) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            eraseText(element);
+                        }, delay);
+                    }
+                }, 100);
+            }
+
+            function eraseText(element) {
+                const text = element.textContent;
+                let index = text.length;
+                const interval = setInterval(() => {
+                    element.textContent = text.slice(0, index);
+                    index--;
+
+                    if (index < 0) {
+                        clearInterval(interval);
+
+                        // Move to the next phrase
+                        const nextPhrase =
+                            phrases[(phrases.indexOf(text) + 1) % phrases.length];
+                        setTimeout(() => {
+                            typeText(nextPhrase, element, 700);
+                        }, 300);
+                    }
+                }, 80);
+            }
+
+            // Start typing effect
+            typeText(phrases[0], typingElement, 1000);
+        </script>
+    </section>
+
+    <section class="about py-5" id="about">
+        <p style="color: transparent;">h</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <figure data-aos="fade-up">
+                        <blockquote class="blockquote">
+                            <h2 class="text-main bold-text ">About Me.</h2>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 fs-1 text-uppercase">
+                            Section 02
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-8 order-2 order-md-1 d-flex align-items-center" data-aos="fade-up">
+                    <div class="card">
+                        <div class="card-body ps-0">
+                            <p class="text-start main-text bold-text fs-1 mb-0 white-opacity-50">
+                                I am Saleem Talha, a 20-year-old student currently pursuing my
+                                <span style="color: #60c965; font-weight: 600;">BSCS degree at Air University,
+                                    Islamabad.</span> My
+                                passion for
+                                technology has led me to explore various facets of development
+                                and design, and I have honed my skills in <span
+                                    style="color: #60c965; font-weight: 600;">Web Development,
+                                    App
+                                    Development,</span> and <span style="color: #60c965; font-weight: 600;">Graphic
+                                    Design.</span> I am a
+                                self-taught developer
+                                and have been working on various projects for the <span
+                                    style="color: #60c965; font-weight: 600;"> past 2
+                                    years.</span> I have worked on projects ranging from simple websites
+                                to complex web applications. I have also worked on various
+                                mobile applications using Flutter. I am also a graphic
+                                designer and have worked on various projects for clients. I am
+                                a hard-working and dedicated individual who is always looking
+                                to learn new skills and improve my existing ones. I am a team
+                                player and can work well with others. I am also a quick
+                                learner and can adapt to new environments easily.
+                            </p>
+
+                            <ul class="main-text fs-1 mt-2 white-opacity-50">
+                                <li>
+                                    Experience : <span style=" color: rgb(104, 222, 110);">2 years +</span>
+                                </li>
+                                <li>
+                                    Projects : <span style="color:  rgb(104, 222, 110);">20 +</span>
+                                </li>
+                            </ul>
+
+                            <p class="text-start main-text bold-text fs-1 mb-0 white-opacity-50 mt-2">
+                                In addition to my technical skills and academic pursuits, I have a keen interest in
+                                staying updated with the latest industry trends and emerging technologies. I believe
+                                that staying at the forefront of technology is essential in this rapidly evolving field.
+                                I enjoy taking on challenges and believe that they provide the best opportunities for
+                                growth. Whether it's tackling a complex coding problem, designing an intuitive user
+                                interface, or brainstorming innovative solutions with a team, I approach every task with
+                                enthusiasm and a commitment to excellence. My goal is not only to excel in my studies
+                                but also to make a meaningful impact through my work, contributing to the ever-evolving
+                                world of technology and design.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-4 order-1 order-md-2" data-aos="fade-up">
+                    <div class="about-img">
+                        <img src="./assests/about pic.jpeg" alt="" class="w-100" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <p style="color: transparent;">h</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <figure data-aos="fade-up">
+                        <blockquote class="blockquote">
+                            <h2 class="text-main bold-text ">Skills.</h2>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 fs-1 text-uppercase">
+                            Section 03
+                        </figcaption>
+                    </figure>
+                </div>
+
+
+                <p class="text-center main-text bold-text fs-1 mb-0 white-opacity-50 mt-2 chart-section"
+                    data-aos="fade-up" id="chartText">
+                    Click On each section of the Chart to see the skill level</p>
+
+                <p class="text-center main-text bold-text fs-1 mb-0 white-opacity-50 mt-2 chart-section"
+                    data-aos="fade-up" id="chartText2">
+                    Hover On each section of the Chart to see the skill level</p>
+
+
+                <div class="col-md-4" data-aos="fade-up">
+                    <!-- Display ECharts Pie Chart -->
+                    <div id="customizedPieChart" style="width: 100%; height: 400px"></div>
+                </div>
+
+                <div class="col-md-4" data-aos="fade-up">
+                    <!-- Display ECharts Pie Chart -->
+                    <div id="customizedPieChart2" style="width: 100%; height: 400px"></div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up">
+                    <!-- Display ECharts Pie Chart -->
+                    <div id="customizedPieChart3" style="width: 100%; height: 400px"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5">
+        <p style="color: transparent;">h</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <figure data-aos="fade-up">
+                        <blockquote class="blockquote">
+                            <h2 class="text-main bold-text ">Services.</h2>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 fs-1 text-uppercase">
+                            Section 04
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-12 py-3" data-aos="fade-up">
+                    <div class="card">
+                        <div class="card-body ps-0">
+                            <ul class="nav nav-tabs tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+                                        data-bs-target="#home-tab-pane" type="button" role="tab"
+                                        aria-controls="home-tab-pane" aria-selected="true">
+                                        Front-End
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
+                                        data-bs-target="#profile-tab-pane" type="button" role="tab"
+                                        aria-controls="profile-tab-pane" aria-selected="false">
+                                        Back-End
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
+                                        data-bs-target="#contact-tab-pane" type="button" role="tab"
+                                        aria-controls="contact-tab-pane" aria-selected="false">
+                                        UI/UX Designs
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent" data-aos="fade-up">
+                                <div class="tab-pane fade show active text-light" id="home-tab-pane" role="tabpanel"
+                                    aria-labelledby="home-tab" tabindex="0">
+                                    <!-- flutter, Andround Java Developement, Web Development heading and sub points -->
+
+                                    <div class="row mt-5">
+                                        <div class="col-md-6 mb-3">
+                                            <h6 class="text-muted mb-3">HTML CSS Bootstrap</h6>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>
+                                                    Responsive Design
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>
+                                                    Customizable Themes
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>
+                                                    Mobile-First Development
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> Grid
+                                                    Layouts
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> Component
+                                                    Reusability
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> CSS
+                                                    Flexbox and Grid
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> Browser
+                                                    Compatibility
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> SASS and
+                                                    Less Preprocessors
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> Bootstrap
+                                                    UI Components
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> Front-End
+                                                    Performance Optimization
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <h6 class="text-muted mb-3">Flutter Developement</h6>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Cross
+                                                    Platform Apps
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Responsive
+                                                    Design
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Mobile &
+                                                    Web Apps
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>API
+                                                    Integration
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Material
+                                                    Design Widgets
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Custom UI
+                                                    Implementations
+                                                </li>
+                                            </ul>
+                                            <h6 class="text-muted mt-3 mb-3">
+                                                Android Development
+                                            </h6>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Responsive
+                                                    Designs
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Custom
+                                                    Android Apps
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade text-light" id="profile-tab-pane" role="tabpanel"
+                                    aria-labelledby="profile-tab" tabindex="0">
+                                    <div class="row mt-5">
+                                        <div class="col-md-6 mb-3">
+                                            <h6 class="text-muted mb-3" data-aos="fade-up">
+                                                Complex Backend Logics
+                                            </h6>
+                                            <ul class="list-group" data-aos="fade-up">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Custom API
+                                                    Design and Implementation
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Data
+                                                    Encryption and Security
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>User
+                                                    Authorization and Access Control
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Real-time
+                                                    Notifications
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Payment
+                                                    Gateway Integration
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Database
+                                                    Relationships and Queries
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Advanced
+                                                    Search and Filtering
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Batch
+                                                    Processing and Jobs
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <h6 class="text-muted mb-3" data-aos="fade-up">
+                                                Database Integration
+                                            </h6>
+                                            <ul class="list-group" data-aos="fade-up">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> MS SQL
+                                                    <span class="ms-3 badge bg-black text-muted border">SQL</span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> MongoDB
+                                                    <span class="ms-3 badge bg-black text-muted border">No SQL</span>
+                                                </li>
+                                                <li class="list-group-item main-list-group d-flex align-items-center">
+                                                    <i class="fa fa-check me-3 text-main"></i> Firebase
+
+                                                    <div>
+                                                        <span
+                                                            class="ms-3 badge bg-black text-muted border">Hosting</span>
+                                                        <span
+                                                            class="ms-1 badge bg-black text-muted border">Analytics</span>
+                                                        <span class="ms-1 badge bg-black text-muted border">Real Time
+                                                            Database</span>
+                                                        <span class="ms-1 badge bg-black text-muted border">Firebase
+                                                            Firestore</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <h6 class="text-muted mb-3 mt-3" data-aos="fade-up">
+                                                Sign-In/Sign-Up Features
+                                            </h6>
+                                            <ul class="list-group" data-aos="fade-up">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>With User
+                                                    Credentials
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>With Email
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>With Gmail
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Secure
+                                                    Validations
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Password
+                                                    Recovery via Email
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade text-light" id="contact-tab-pane" role="tabpanel"
+                                    aria-labelledby="contact-tab" tabindex="0">
+                                    <div class="row mt-5">
+                                        <div class="col-md-6 mb-3">
+                                            <h6 class="text-muted mb-3" data-aos="fade-up">
+                                                Figma Designing
+                                            </h6>
+                                            <ul class="list-group" data-aos="fade-up">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> Mobile
+                                                    App Designs
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> Web
+                                                    Designs
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i> Fully
+                                                    Interative Designs
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>
+                                                    Prototyping
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>
+                                                    Responsive Designs
+                                                </li>
+                                            </ul>
+                                            <h6 class="text-muted mt-3 mb-3" data-aos="fade-up">
+                                                Canva Designing
+                                            </h6>
+                                            <ul class="list-group" data-aos="fade-up">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Logo
+                                                    Designing
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Custom
+                                                    Thumbnails
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Custom
+                                                    Presentations
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <h6 class="text-muted mb-3" data-aos="fade-up">
+                                                Framer Designing
+                                            </h6>
+                                            <ul class="list-group" data-aos="fade-up">
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Mobile App
+                                                    Designs
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Web
+                                                    Designs
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Responsive
+                                                    Designs
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-3 text-main"></i>Publishing
+                                                    / Hosting
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5">
+        <p style="color: transparent;">h</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <figure data-aos="fade-up">
+                        <blockquote class="blockquote">
+                            <h2 class="text-main bold-text ">Projects.</h2>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 fs-1 text-uppercase">
+                            Section 05
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div class="row py-5" style="overflow: hidden">
+                <div class="">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card mb-3 border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center"
+                                            style="height: 170px;">
+                                            <div style="height: 180px; width: 180px; object-fit: cover;">
+                                                <img src="/assests/harmonic.png" class="img-fluid rounded-4"
+                                                    alt="Projects" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">Harmonic Hub</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+                                                    <p class="text-body-secondary">
+                                                        Harmonic Hub is a feature-rich<span
+                                                            style="color: #60c965; font-weight: 600;"> Music App</span>
+                                                        developed using the
+                                                        <span style="color: #60c965; font-weight: 600;">Flutter
+                                                            Framework</span>. It offers a seamless user
+                                                        experience with built-in songs, a robust <span
+                                                            style="color: #60c965; font-weight: 600;">Firebase Firestore
+                                                            integration</span>, and
+                                                        various essential functionalities. Harmonic Hub is a <span
+                                                            style="color: #60c965; font-weight: 600;">Cross-Platform</span>
+                                                        Application meaning you can use it on <span
+                                                            style="color: #60c965; font-weight: 600;">Android,
+                                                            IOS</span> and <span
+                                                            style="color: #60c965; font-weight: 600;">Web</span> as well
+                                                    </p>
+
+                                                    <p class="text-body-secondary">Harmonic Hub is a
+                                                        cutting-edge music application that has been
+                                                        meticulously developed using the versatile Flutter framework.
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">Flutter</span>
+                                                        <span class="badge">Dart</span>
+                                                        <span class="badge">Firebase</span>
+                                                    </div>
+                                                    <div class="git">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/Harmoni-Hub"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class=" swiper-slide">
+                                <div class="card mb-3 border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center"
+                                            style="height: 170px;">
+                                            <div style="height: 180px; width: 180px; object-fit: cover;">
+                                                <img src="/assests/youtube.logo" class="img-fluid rounded-4"
+                                                    alt="Projects" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">Youtue Clone</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+                                                    <p class="text-body-secondary">
+                                                        This project presents a
+                                                        meticulously crafted. <span
+                                                            style="color: #60c965; font-weight: 600;">Youtube
+                                                            Landing
+                                                            Page Clone</span> developed using <span
+                                                            style="color: #60c965; font-weight: 600;">HTML
+                                                        </span>and
+                                                        <span style="color: #60c965; font-weight: 600;">CSS</span>.
+                                                        Our
+                                                        primary
+                                                        objective was to replicate the familiar and
+                                                        user-friendly
+                                                        interface of the world's leading
+                                                        video-sharing platform while
+                                                        ensuring optimal responsiveness across
+                                                        various devices and
+                                                        screen sizes.
+                                                        It works perfectly, you can <span
+                                                            style="color: #60c965; font-weight: 600;"> Watch the Videos
+                                                        </span> and explore different <span
+                                                            style="color: #60c965; font-weight: 600;"> Youtube
+                                                            services</span>.
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">HTML</span>
+                                                        <span class="badge">CSS</span>
+                                                        <span class="badge">JavaScript</span>
+                                                    </div>
+                                                    <div class="git">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/Youtube-Clone"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card mb-3 border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center rounded-4"
+                                            style="height: 170px; overflow: hidden; ">
+                                            <div style="height: 170px; width: 170px; object-fit: cover;"
+                                                class="rounded-4">
+                                                <img src="/assests/ai.jpg" class="img-fluid rounded-4" alt="Projects" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">HarmonicHub +</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+                                                    <p class="text-body-secondary">
+                                                        Harmonic Hub Plus is an
+                                                        <span style="color: #60c965; font-weight: 600;">Ai Powered Radio
+                                                            App</span>.
+                                                        It is a part of Harmonic Hub. You have the capability to
+                                                        <span style="color: #60c965; font-weight: 600;">Paid Version
+                                                            App</span> interact with the AI not only through
+                                                        conversation
+                                                        but also to issue specific commands for
+                                                        <span
+                                                            style="color: #60c965; font-weight: 600;">Navigating</span>
+                                                        the application and
+                                                        <span style="color: #60c965; font-weight: 600;">Selecting</span>
+                                                        and
+                                                        <span style="color: #60c965; font-weight: 600;">Playing your
+                                                            preferred music</span>.
+                                                    <p class="text-body-secondary">
+                                                        Say goodbye to the hassle of manual song selection and let
+                                                        Harmonic Hub Plus take care of the music for you. Sit back,
+                                                        relax, and let the power of AI and music seamlessly blend
+                                                        together as you indulge in an immersive audio experience.
+                                                        Whether you're a music connoisseur or simply love to groove to
+                                                        the rhythm, Harmonic Hub Plus is here to revolutionize the way
+                                                        you enjoy music. Harmonic Hub Plus
+                                                        <span
+                                                            style="color: #60c965; font-weight: 600;">Cross-Platform</span>
+                                                        Application meaning you can use it on
+                                                        <span style="color: #60c965; font-weight: 600;">Android,
+                                                            IOS</span> and
+                                                        <span style="color: #60c965; font-weight: 600;">Web</span> as
+                                                        well
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">Flutter</span>
+
+                                                        <span class="badge">Firebase</span>
+                                                        <span class="badge">Alan Ai</span>
+                                                    </div>
+                                                    <div class="git">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/AI-Voice-Assistant-Radio"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card  border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center rounded-4"
+                                            style="height: 170px; overflow: hidden; ">
+                                            <div style="height: 170px; width: 170px; object-fit: cover;"
+                                                class="rounded-4">
+                                                <img src="/assests/xo.jpg" class="img-fluid rounded-4" alt="Projects"
+                                                    style="height: 160px;" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">Xylophone App</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+                                                    <p class="text-body-secondary">
+                                                        Xylophone App, a delightful musical companion that brings the
+                                                        joy of playing the xylophone right to your fingertips! Created
+                                                        using the versatile and user-friendly Flutter framework, this
+                                                        app offers a unique and interactive way to incorporate music
+                                                        into your daily routine.
+
+                                                        With the Flutter Daily Xylophone App, you can unlock the
+                                                        enchanting sounds of the xylophone and explore your musical
+                                                        creativity. Whether you're a seasoned musician or a curious
+                                                        beginner, this app is designed to cater to all skill levels.
+
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">Flutter</span>
+
+                                                        <span class="badge">Dart</span>
+
+                                                    </div>
+                                                    <div class="git">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/Xylophone-App"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card mb-3 border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center"
+                                            style="height: 170px;">
+                                            <div style="height: 180px; width: 180px; object-fit: cover;">
+                                                <img src="/assests/planME.png" class="img-fluid rounded-4"
+                                                    alt="Projects" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">Plan Me</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+
+                                                    <p class="text-body-secondary">
+                                                        Welcome to the <span style="color: #60c965; font-weight: 600;">
+                                                            Daily Routine
+                                                            App</span>, your personal
+                                                        assistant for organizing and optimizing your daily tasks! With
+                                                        this powerful mobile application, you can effortlessly manage
+                                                        and track your daily routines, ensuring productivity and
+                                                        efficiency throughout your day. Designed using Flutter, a
+                                                        versatile and cross-platform framework, this app provides a
+                                                        seamless user experience across iOS and Android devices.
+
+
+                                                    </p>
+
+                                                    <p class="text-body-secondary"></p>
+                                                    Gone are the days of juggling multiple to-do lists and
+                                                    struggling to keep up with your hectic schedule. The Flutter
+                                                    Daily Routine App empowers you to create custom routines
+                                                    tailored to your unique lifestyle. Whether you're a student,
+                                                    professional, or simply someone seeking a more organized life,
+                                                    this app has got you covered.
+
+                                                    You'll enjoy a user-friendly interface that allows you to easily
+                                                    <span style="color: #60c965; font-weight: 600;">add,
+                                                        edit,</span>.
+                                                    and <span
+                                                        style="color: #60c965; font-weight: 600;">prioritize</span>
+                                                    tasks. Plan Me
+
+                                                    <span
+                                                        style="color: #60c965; font-weight: 600;">Cross-Platform</span>
+                                                    Application meaning you can use it on <span
+                                                        style="color: #60c965; font-weight: 600;">Android,
+                                                        IOS</span> and <span
+                                                        style="color: #60c965; font-weight: 600;">Web</span> as well
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">Flutter</span>
+
+                                                        <span class="badge">Dart</span>
+
+                                                    </div>
+                                                    <div class="git">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/Plan-Me"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+
+
+
+                            <div class="swiper-slide">
+                                <div class="card mb-3 border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center rounded-4"
+                                            style="height: 170px; overflow: hidden; ">
+                                            <div style="height: 180px; width: 180px; object-fit: cover;"
+                                                class="rounded-4">
+                                                <img src="/assests/dish.jpg" class="img-fluid rounded-4"
+                                                    alt="Projects" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">Dish Dash</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+                                                    <p class="text-body-secondary">
+                                                        Dish Dash stands as a meticulously crafted, fully interactive,
+                                                        and exceptionally user-friendly <span
+                                                            style="color: #60c965; font-weight: 600;"> Mobile
+                                                            Application Design</span>.
+                                                        Created with precision in <span
+                                                            style="color: #60c965; font-weight: 600;">Figma</span>,
+                                                        this app boasts a
+                                                        sleek and contemporary design, ensuring effortless navigation
+                                                        for its users. I've used <span
+                                                            style="color: #60c965; font-weight: 600;">Prototyping</span>
+                                                        to make the design fully
+                                                        interactive, the design itself works almost like a real
+                                                        application.
+                                                    </p>
+
+                                                    <p class="text-body-secondary">Within Dish Dash, users are afforded
+                                                        the convenience of perusing
+                                                        restaurant menus, exploring enticing food visuals, and placing
+                                                        orders with remarkable ease, all through a few simple taps. The
+                                                        design process of Dish Dash was meticulously executed in Figma,
+                                                        a powerful design tool renowned for its capacity to create
+                                                        interactive prototypes. Figma empowered me to experiment with
+                                                        diverse design elements and layouts, ultimately enabling the
+                                                        realization of a perfect user experience.</p>
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">Figma</span>
+
+                                                        <span class="badge">Canva</span>
+
+                                                    </div>
+                                                    <div class="git">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/Dish-Dash"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card mb-3 border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center rounded-4"
+                                            style="height: 170px; overflow: hidden; ">
+                                            <div style="height: 170px; width: 170px; object-fit: cover;"
+                                                class="rounded-4">
+                                                <img src="/assests/snake.jpeg" class="img-fluid rounded-4"
+                                                    alt="Projects" style="height: 160px;" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">Snake Game</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+                                                    <p class="text-body-secondary">
+                                                        Welcome to the Snake Game, a captivating C++ program that
+                                                        combines the thrill of gaming with the power of Data Structures
+                                                        and Algorithms! In this game, you'll witness the magic of DSA
+                                                        concepts like linked lists as you control a snake through a
+                                                        maze. The snake's body is dynamically created using a linked
+                                                        list data structure, allowing it to grow and shrink as it
+                                                        devours food. As you navigate the snake across the game board,
+                                                        the program cleverly animates its movement, giving you a
+                                                        real-time visual experience. With each mouth-watering morsel
+                                                        consumed, the snake's body dynamically expands, showcasing the
+                                                        power of linked list manipulation. Utilizing these DSA concepts
+                                                        adds depth and complexity to the gameplay, offering an engaging
+                                                        and challenging experience. Prepare yourself for an adventure
+                                                        that will test your strategic thinking, reflexes, and mastery of
+                                                        DSA as you strive for the highest score in this mesmerizing
+                                                        snake game!
+                                                    <p class="text-body-secondary">
+                                                        It is
+                                                    <ul>
+
+                                                        <li>
+                                                            <span
+                                                                style="color: #60c965; font-weight: 600;">Multiplayer</span>
+                                                        </li>
+                                                        <li>
+                                                            <span
+                                                                style="color: #60c965; font-weight: 600;">Multi-Leveled</span>
+                                                        </li>
+                                                    </ul>
+                                                    </p>
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">C++</span>
+
+
+
+                                                    </div>
+                                                    <div class="git1">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/Snake-Game"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card mb-3 border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center rounded-4"
+                                            style="height: 170px; overflow: hidden; ">
+                                            <div style="height: 170px; width: 170px; object-fit: cover;"
+                                                class="rounded-4">
+                                                <img src="/assests/cal.png" class="img-fluid rounded-4"
+                                                    alt="Projects" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">Calculator App</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+
+                                                    <p class="text-body-secondary">
+                                                        The calculator app was created as part of my <span
+                                                            style="color: #60c965; font-weight: 600;">Internship for
+                                                            Bharat Intern.</span>
+                                                        I used the following technologies to build the
+                                                        app: <span style="color: #60c965; font-weight: 600;">Flutter
+                                                            Framework</span>
+                                                    </p>
+                                                    <p class="text-body-secondary">
+                                                        The calculator app is a simple and easy-to-use tool that can be
+                                                        used for basic mathematical calculations. It features a splash
+                                                        screen that displays the app's logo and name, followed by a
+                                                        screen that allows the user to choose between a light or dark
+                                                        theme. The calculator can handle more than 2 numbers, and can
+                                                        perform the following operations:
+
+
+
+
+
+                                                    </p>
+                                                    <p class="text-body-secondary">
+
+                                                    <ul>
+                                                        <li>Subtraction</li>
+                                                        <li>Addition</li>
+                                                        <li>Multiplication</li>
+                                                        <li>Division</li>
+                                                        <li>Delete</li>
+                                                        <li>Clear screen</li>
+                                                    </ul>
+
+
+                                                    </p>
+
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">Flutter</span>
+
+                                                        <span class="badge">Dart</span>
+
+                                                    </div>
+                                                    <div class="git">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/Calculator-App"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card mb-3 border border-main p-3 rounded-4 main-text" data-aos="fade-up">
+                                    <div class="row g-0">
+                                        <div class="col-md-4 d-flex justify-content-center align-items-center rounded-4"
+                                            style="height: 170px; overflow: hidden; ">
+                                            <div style="height: 170px; width: 170px; object-fit: cover;"
+                                                class="rounded-4">
+                                                <img src="/assests/por.png" class="img-fluid rounded-4"
+                                                    alt="Projects" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body py-0">
+                                                <h5 class="card-title">Portfolio .V1</h5>
+                                                <div style="height: 100px; overflow: auto" class="mobile-view-card">
+
+
+                                                    <p class="text-body-secondary">
+                                                        This is my Previous Portfolio. meticulously designed to serve as
+                                                        a platform for showcasing my skills and experiences. Through
+                                                        this digital portfolio, I aim to provide a comprehensive insight
+                                                        into my professional journey, featuring my expertise,
+                                                        accomplishments, and the projects I've passionately worked on.
+                                                        Whether you're exploring my web development skills, design
+                                                        proficiency, or my diverse range of experiences, this website
+                                                        offers a glimpse into the value I bring to the table. It's a
+                                                        testament to my commitment to continuous growth and my
+                                                        dedication to delivering high-quality work. Welcome, and thank
+                                                        you for visiting – I look forward to sharing my journey with
+                                                        you.
+
+
+
+
+
+                                                    </p>
+                                                    <p class="text-body-secondary">
+
+
+                                                </div>
+                                                <div
+                                                    class="mt-3 d-flex flex-wrap align-items-center justify-content-between">
+                                                    <div>
+                                                        <span class="badge">HTML</span>
+                                                        <span class="badge">Css</span>
+
+                                                        <span class="badge">JavaScript</span>
+
+                                                    </div>
+                                                    <div class="git">
+                                                        <!-- Create a flex container that wraps elements and justifies content between -->
+                                                        <!-- badge of techs like html, css -->
+
+                                                        <a href="https://github.com/Saleem-Talha/Portfolio"
+                                                            style="text-decoration: none;">
+                                                            <button class="btn btn-main btn-sm main-text px-3 mt-2">
+                                                                <!-- Use mt-2 for spacing -->
+                                                                Github
+                                                            </button>
+                                                        </a>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Add more swiper-slide elements for additional project cards -->
+                        </div>
+                    </div>
+                    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                    <div class="swiper-slide swiper-slide-hand">
+                        <center>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <lord-icon src="https://cdn.lordicon.com/zmkotitn.json" trigger="loop" delay="1000"
+                                    colors="primary:#60c965"
+                                    style="width: 50px; height: 50px; transform: rotate(180deg)">
+                                </lord-icon>
+                                <span class="text-muted mx-3">Swipe to Slide</span>
+                                <lord-icon src="https://cdn.lordicon.com/zmkotitn.json" trigger="loop" delay="1000"
+                                    colors="primary:#60c965" style="width: 50px; height: 50px">
+                                </lord-icon>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <!-- Add another col-md-6 block with similar content for the second column -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <figure data-aos="fade-up">
+                        <blockquote class="blockquote">
+                            <h2 class="text-main bold-text">Contact Me.</h2>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 fs-1 text-uppercase">
+                            Section 06
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-12">
+                    <div class="card mt-5">
+                        <div class="card-body p-0">
+                            <!-- Modify the form with an id attribute -->
+                            <form id="myForm">
+                                <div class="form-floating mb-3" data-aos="fade-up">
+                                    <input type="text" class="form-control bg-transparent" id="username" name="username"
+                                        placeholder="Username" />
+                                    <label for="username">Username</label>
+                                </div>
+                                <div class="form-floating mb-3" data-aos="fade-up">
+                                    <input type="email" class="form-control bg-transparent" id="email" name="email"
+                                        placeholder="name@example.com" />
+                                    <label for="email">Email address</label>
+                                </div>
+                                <div class="form-floating" data-aos="fade-up">
+                                    <textarea name="message" id="message" placeholder="Say Hello!"
+                                        class="form-control bg-transparent" cols="30" rows="10"
+                                        style="height: 100px"></textarea>
+                                    <label for="message">Enter Message</label>
+                                </div>
+                                <div class="float-end" data-aos="fade-up">
+                                    <!-- Call the sendEmail function when the button is pressed -->
+                                    <button type="button" class="btn btn-main mt-3 bold-text" onclick="sendEmail()">
+                                        Say Hello !
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="py-5">
+        <!-- social links, all sections links, design and develop by me -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mx-auto">
+                    <!-- social links -->
+                    <ul class="footer-social-links" data-aos="fade-up">
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/saleem-talha-47b004281/" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Saleem-Talha" target="_blank"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTMXgJFbZkGdZlLdQgCcVtjPmPnPhwVghMHjhqqRTrDLCbtXNcKgDSrkblhRvwZrhRRDqB"
+                                target="_blank"><i class="fas fa-envelope"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://wa.link/g4kggi" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </li>
+                    </ul>
+
+                    <style>
+                        /* horizontally align */
+                        .footer-social-links {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            list-style: none;
+                            padding: 0;
+                        }
+
+                        .footer-social-links li {
+                            margin: 0 10px;
+                        }
+
+                        .footer-social-links li a {
+                            font-size: 1.5rem;
+                            color: #60c965;
+                            transition: all 0.3s ease;
+                        }
+
+                        .footer-social-links li a:hover {
+                            color: #fff;
+                        }
+                    </style>
+
+                    <!-- all link sections -->
+                    <ul class="footer-links mt-5" data-aos="fade-up">
+                        <li><a class="nav-hedings" href="#home">Home</a></li>
+                        <li><a class="nav-hedings" href="#about">About</a></li>
+                        <li><a class="nav-hedings" href="#skills">Skills</a></li>
+                        <li><a class="nav-hedings" href="#services">Services</a></li>
+                        <li><a class="nav-hedings" href="#projects">Projects</a></li>
+                        <li><a class="nav-hedings" href="#contacts">Contact</a></li>
+                    </ul>
+
+                    <style>
+                        /* horizontally align */
+                        .footer-links {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            list-style: none;
+                            padding: 0;
+                        }
+
+                        .footer-links li {
+                            margin: 0 10px;
+                        }
+
+                        .footer-links li a {
+                            font-size: 1rem;
+                            color: #fff;
+                            transition: all 0.3s ease;
+                            text-decoration: none;
+                        }
+
+                        .footer-links li a:hover {
+                            color: #60c965;
+                        }
+                    </style>
+
+                    <!-- design and develop by me -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: {
+                    type: "circle",
+                    stroke: { width: 0, color: "#000000" },
+                    polygon: { nb_sides: 5 },
+                    image: { src: "img/github.svg", width: 100, height: 100 },
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false,
+                    anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+                },
+                size: {
+                    value: 3,
+                    random: true,
+                    anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#ffffff",
+                    opacity: 0.4,
+                    width: 1,
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: { enable: false, rotateX: 600, rotateY: 1200 },
+                },
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: false, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true,
+                },
+                modes: {
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    bubble: {
+                        distance: 400,
+                        size: 40,
+                        duration: 2,
+                        opacity: 8,
+                        speed: 3,
+                    },
+                    repulse: { distance: 200, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 },
+                },
+            },
+            retina_detect: true,
+        });
+        var count_particles, stats, update;
+        stats = new Stats();
+        stats.setMode(0);
+        stats.domElement.style.position = "absolute";
+        stats.domElement.style.left = "0px";
+        stats.domElement.style.top = "0px";
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector(".js-count-particles");
+        update = function () {
+            stats.begin();
+            stats.end();
+            if (
+                window.pJSDom[0].pJS.particles &&
+                window.pJSDom[0].pJS.particles.array
+            ) {
+                count_particles.innerText =
+                    window.pJSDom[0].pJS.particles.array.length;
+            }
+            requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.3.0/echarts.min.js"></script>
+    <!-- ECharts scripts -->
+    <script>
+        // ECharts pie chart configuration
+        const pieChartOptions = {
+            backgroundColor: "",
+            title: {
+                text: "Customized Pie",
+                left: "center",
+                top: 20,
+                bottom: 5,
+
+                textStyle: {
+                    color: "#ccc",
+                },
+            },
+            tooltip: {
+                trigger: "item",
+            },
+            visualMap: {
+                show: false,
+                min: 80,
+                max: 600,
+                inRange: {
+                    colorLightness: [0, 1],
+                },
+            },
+            series: [
+                {
+                    name: "Skill Level",
+                    type: "pie",
+                    radius: "55%",
+                    center: ["50%", "50%"],
+                    roseType: "radius",
+                    label: {
+                        color: "rgba(255, 255, 255, 0.3)",
+                    },
+                    labelLine: {
+                        lineStyle: {
+                            color: "rgba(255, 255, 255, 0.3)",
+                        },
+                        smooth: 0.2,
+                        length: 10,
+                        length2: 20,
+                    },
+                    itemStyle: {
+                        shadowBlur: 200,
+                        shadowColor: "rgba(0, 0, 0, 0.5)",
+                    },
+                    animationType: "scale",
+                    animationEasing: "elasticOut",
+                    animationDelay: function (idx) {
+                        return Math.random() * 200;
+                    },
+                },
+            ],
+        };
+
+        const webSkillsData = {
+            ...pieChartOptions,
+            title: {
+                text: "Web Development Skills",
+                left: "center",
+                top: 20,
+
+                textStyle: {
+                    color: "rgba(255, 255, 255, 0.3)",
+                },
+            },
+            series: [
+                {
+                    ...pieChartOptions.series[0],
+                    data: [
+                        { value: 210, name: "JavaScript", tooltip: "<span style='font-weight: 600;'>JavaScript</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Intermediate</span>" },
+                        { value: 270, name: "MongoDB", tooltip: "<span style='font-weight: 600;'>MongoDB</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Proficient</span>" },
+                        { value: 370, name: "Bootstrap", tooltip: "<span style='font-weight: 600;'>Bootstrap</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Skilled</span>" },
+                        { value: 470, name: "SQL", tooltip: "<span style='font-weight: 600;'>SQL</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Strong</span>" },
+                        { value: 500, name: "Firebase", tooltip: "<span style='font-weight: 600;'>Firebase</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Expert</span>" },
+                        { value: 510, name: "HTML & CSS", tooltip: "<span style='font-weight: 600;'>HTML & CSS</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Experienced</span>" },
+                    ],
+                    itemStyle: {
+                        color: "#5470c6",
+                    },
+                    tooltip: {
+                        formatter: function (params) {
+                            return params.data.tooltip;
+                        },
+                    },
+                },
+            ],
+        };
+
+        // Data for "UI/UX Design Skills" Pie Chart
+        const uiuxSkillsData = {
+            ...pieChartOptions,
+            title: {
+                text: "UI/UX Design Skills",
+                left: "center",
+                top: 20,
+                textStyle: {
+                    color: "rgba(255, 255, 255, 0.3)",
+                },
+            },
+            series: [
+                {
+                    ...pieChartOptions.series[0],
+                    data: [
+                        { value: 300, name: "Framer", tooltip: "<span style='font-weight: 600;'>Framer</span><br><span style='color: red;'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Skilled</span>" },
+                        { value: 400, name: "Canva", tooltip: "<span style='font-weight: 600;'>Canva</span><br><span style='color: red;'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Strong</span>" },
+                        { value: 450, name: "Protoypintg", tooltip: "<span style='font-weight: 600;'>Prototyping</span><br><span style='color: red;'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Experienced</span>" },
+                        { value: 490, name: "Figma", tooltip: "<span style='font-weight: 600;'>Figma</span><br><span style='color: red;'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Expert</span>" },
+                    ],
+                    itemStyle: {
+                        color: "#fc6868",
+                    },
+                    tooltip: {
+                        formatter: function (params) {
+                            return params.data.tooltip;
+                        },
+                    },
+                },
+            ],
+        };
+
+        const mobiledata = {
+            ...pieChartOptions,
+            title: {
+                text: "Mobile Development Skills",
+                left: "center",
+                top: 20,
+                textStyle: {
+                    color: "rgba(255, 255, 255, 0.3)",
+                },
+            },
+            series: [
+                {
+                    ...pieChartOptions.series[0],
+                    data: [
+                        { value: 250, name: "Java", tooltip: "<span style='font-weight: 600;'>Java</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Intermediate</span>" },
+                        { value: 350, name: "MongoDB", tooltip: "<span style='font-weight: 600;'>MongoDB</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Proficient</span>" },
+                        { value: 410, name: "Dart", tooltip: "<span style='font-weight: 600;'>Dart</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Experienced</span>" },
+                        { value: 450, name: "Firebase", tooltip: "<span style='font-weight: 600;'>Firebase</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Expert</span>" },
+                        { value: 490, name: "Flutter", tooltip: "<span style='font-weight: 600;'>Figma</span><br><span style='color: rgb(30, 143, 151);'>•</span> <span style='color: yourTextColor; font-weight: 600;'>Experienced</span>" },
+                    ],
+                    itemStyle: {
+                        color: "rgb(39, 179, 190)",
+                    },
+                    tooltip: {
+                        formatter: function (params) {
+                            return params.data.tooltip;
+                        },
+                    },
+                },
+            ],
+        };
+
+
+
+        // Create ECharts instances and set options
+        const webSkillsChart = echarts.init(
+            document.getElementById("customizedPieChart")
+        );
+        const uiuxSkillsChart = echarts.init(
+            document.getElementById("customizedPieChart2")
+        );
+        const mobilechart = echarts.init(
+            document.getElementById("customizedPieChart3")
+        );
+
+        webSkillsChart.setOption(webSkillsData);
+        uiuxSkillsChart.setOption(uiuxSkillsData);
+        mobilechart.setOption(mobiledata);
+    </script>
+
+    <script>
+        const swiper = new Swiper(".swiper-container", {
+            slidesPerView: 2,
+            spaceBetween: 30,
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: ".swiper-pagination",
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: ".swiper-scrollbar",
+            },
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+
+    <div class="footer-design-develop bg-main p-5">
+        <p class="text-center text-muted mb-0 main-text">
+            Designed & Developed By
+            <a href="#home" class="designed">© Saleem Talha</a>
+        </p>
+        <p class="text-center text-muted mb-0 main-text mt-2"> All Rights Reserved</p>
+    </div>
+</body>
+
+</html>
