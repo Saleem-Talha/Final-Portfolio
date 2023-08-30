@@ -709,10 +709,18 @@ canvas {
     }
 
     .swiper-slide {
-        flex: 1 0 calc(100% - 30px); /* One card per row on smaller screens */
+        flex: 1 0 calc(100% ); /* One card per row on smaller screens */
         margin: 15px 0;
     }
 }
 
+
+@media (max-width: 400px) {
+   
+    .swiper-slide {
+        flex: 1 0 calc(100% ); /* One card per row on smaller screens */
+        margin: 10px 0;
+    }
+}
 /* Add margin to the top when the "moved-down" class is present */
 
