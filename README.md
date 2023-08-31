@@ -9,6 +9,7 @@ This Portfolio was created using
 
 Explore the live demo of this To-Do List app [Live Demo](https://saleemtalhaportfolio2.netlify.app/)
 
+## Technologies Used
 - HTML
 - CSS
 - JavaScript
