@@ -7,7 +7,7 @@ This Portfolio was created using
 
 ## Live Demo
 
-Explore the live demo of this To-Do List app [Live Demo](https://saleemtalhaportfolio2.netlify.app/)
+Explore the live demo here [Live Demo](https://saleemtalhaportfolio2.netlify.app/)
 
 ## Technologies Used
 - HTML
