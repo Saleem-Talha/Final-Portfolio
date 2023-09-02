@@ -7,7 +7,7 @@ This Portfolio was created using
 
 ## Live Demo
 
-Explore the live demo here [Live Demo](https://saleem-talha.github.io/Quote-Generator-Web-App/)
+Explore the live demo here [Live Demo](https://saleemtalhaportfolio2.netlify.app/)
 
 ## Technologies Used
 - HTML
